@@ -1,17 +1,14 @@
 package br.com.polimorfismo;
 
-public class Animal {
+public class Animal implements InterfaceAnimal {
 	
 	private String nome;
 	private int idade;
 	
-	void emitirSom() {
+	public void emitirSom() {
 		System.out.println("Emitindo som...");
 	}
-	
-	void correr() {}
-	void subirArvore() {}
-	
+		
 	public String getNome() {
 		return nome;
 	}
