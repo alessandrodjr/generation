@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins&family=Raleway&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.bgPrimary{
+    background: #F2D5C4;
+}
+
+.bgtry{
+    background: #FFFBF7;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 45px;
+}
+
+nav h3{
+    font-size: 2em;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4em;
+    text-align: center;
+}
+
+.imgFundo{
+    background-image: url(./img/background-image.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 650px;
+}
+
+.detalhes{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 400px;
+    width: 25%;
+    padding-left: 100px;
+}
+
+.detalhes input{
+    width: 80%;
+    height: 40px;
+    padding: 0 16px;
+    border: none;
+}
+
+.detalhes button{
+    width: 60%;
+    height: 50px;
+    background: #463232;
+    font-size: 1.3;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    outline: none;
+}
+
+.empresas{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 2em;
+}
+
+.logos{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 25px 0;
+}
+
+.produtos{
+    display: flex;
+    justify-content: space-evenly;
+    height: 650px;
+}
+
+.produtosUnico{
+    width: 40%;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.btComprar{
+    width: 30%;
+    height: 50px;
+    background: #463232;
+    font-size: 1.3;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    outline: none;
+}
+
+.btLer{
+    width: 40%;
+    height: 50px;
+    color: #463232;
+    font-size: 1.3;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: 1px solid #463232;
+}

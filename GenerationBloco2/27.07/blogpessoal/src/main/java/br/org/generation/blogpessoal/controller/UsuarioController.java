@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.org.generation.blogpessoal.model.Usuario;
 import br.org.generation.blogpessoal.model.UserLogin;
+import br.org.generation.blogpessoal.model.Usuario;
 import br.org.generation.blogpessoal.repository.UsuarioRepository;
 import br.org.generation.blogpessoal.service.UsuarioService;
 
@@ -53,9 +53,9 @@ public class UsuarioController {
 	@PostMapping("/cadastrar")
 	public ResponseEntity<Usuario> Post(@RequestBody Usuario usuario) {
 
-		Optional<Usuario> usuarioResp = usuarioService.CadastrarUsuario(usuario);
+		Usuario usuarioResp = usuarioService.cadastrarUsuario(usuario);
 		try {
-			return ResponseEntity.ok(usuarioResp.get());
+			return ResponseEntity.status(HttpStatus.CREATED).body(usuarioResp);
 		} catch (Exception e) {
 			return ResponseEntity.badRequest().build();
 		}
@@ -67,7 +67,7 @@ public class UsuarioController {
 		Optional<Usuario> usuarioResp = usuarioService.atualizarUsuario(usuario);
 		try {
 			return ResponseEntity.ok(usuarioResp.get());
-		} catch (Exception e) {
+		} catch (Exception e) { 
 			return ResponseEntity.badRequest().build();
 		}
 	}
